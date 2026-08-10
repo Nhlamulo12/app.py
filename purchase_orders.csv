@@ -1,0 +1,16 @@
+PO_ID,Supplier,Product,Order_Date,Expected_Delivery,Status,Lead_Time_Days,Cost
+PO-1001,Voltex,MCB 20A Circuit Breaker,2026-07-20,2026-08-05,Late,16,10260
+PO-1002,AEC,3-Core 2.5mm Cable,2026-07-25,2026-08-08,On Time,14,6150
+PO-1003,Actom,Contactor 40A,2026-08-01,2026-08-12,On Time,11,3360
+PO-1004,Voltex,Distribution Panel 12-Way,2026-07-15,2026-08-01,Late,17,6000
+PO-1005,CBI,Transformer 25KVA,2026-08-03,2026-08-20,On Time,17,18500
+PO-1006,AEC,LED Floodlight 100W,2026-08-02,2026-08-10,On Time,8,15750
+PO-1007,Voltex,Surge Protector,2026-07-28,2026-08-04,Late,7,5250
+PO-1008,Actom,Isolator Switch 63A,2026-08-05,2026-08-14,On Time,9,1080
+PO-1009,CBI,Earthing Rod 1.2m,2026-08-01,2026-08-07,On Time,6,4500
+PO-1010,Voltex,Cable Tray 300mm,2026-07-22,2026-08-03,Late,12,9750
+PO-1011,AEC,Socket Outlet Double,2026-08-06,2026-08-13,On Time,7,5780
+PO-1012,Actom,Relay 24VDC,2026-08-04,2026-08-11,On Time,7,5580
+PO-1013,CBI,Busbar Copper 25x5mm,2026-07-29,2026-08-06,Late,8,8010
+PO-1014,Voltex,Gland Pack 20mm,2026-08-07,2026-08-12,On Time,5,1275
+PO-1015,AEC,Timer Switch 7-Day,2026-08-05,2026-08-13,On Time,8,5940

@@ -1,0 +1,21 @@
+Product,Category,Warehouse,Current_Stock,Reorder_Level,Unit_Cost,Variance
+MCB 20A Circuit Breaker,Breakers,JHB,12,20,85.5,8
+3-Core 2.5mm Cable,Cables,CPT,500,300,12.3,-200
+Contactor 40A,Contactors,JHB,8,10,420,2
+Distribution Panel 12-Way,Panels,DBN,3,5,1200,2
+Transformer 25KVA,Transformers,JHB,1,2,18500,1
+LED Floodlight 100W,Lighting,CPT,45,50,350,5
+Surge Protector,Protection,JHB,25,30,210,5
+Isolator Switch 63A,Switches,DBN,6,8,180,2
+Earthing Rod 1.2m,Earthing,JHB,100,80,45,-20
+Cable Tray 300mm,Cable Management,CPT,15,20,650,5
+Socket Outlet Double,Accessories,JHB,200,150,28.9,-50
+Relay 24VDC,Controls,CPT,18,25,310,7
+Busbar Copper 25x5mm,Busbars,DBN,9,12,890,3
+Gland Pack 20mm,Accessories,JHB,150,100,8.5,-50
+Timer Switch 7-Day,Controls,CPT,11,15,540,4
+Weatherproof Box,Enclosures,DBN,22,30,95,8
+Voltage Tester,Tools,JHB,35,40,120,5
+Trunking 50x50mm,Cable Management,CPT,60,50,42,-10
+Fuse Link 100A,Fuses,DBN,7,10,165,3
+Energy Meter 3-Phase,Meters,JHB,4,6,2100,2
