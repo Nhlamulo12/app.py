@@ -4,20 +4,22 @@ import plotly.express as px
 
 st.set_page_config(page_title="KPI Dashboard", layout="wide")
 
-# --- CSS for KPI cards ---
+# --- CSS for KPI cards + Dark Black Text ---
 st.markdown("""
 <style>
     .stApp { background-color: #F5F6FA; }
-    h1, h2, h3 { color: #2D3748; font-weight: 700; }
+    h1, h2, h3 { color: #000000; font-weight: 800; }
     .kpi-card {
         background: white;
         padding: 20px;
         border-radius: 12px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         border-left: 5px solid;
     }
-    .kpi-title { font-size: 14px; color: #718096; margin-bottom: 8px; }
-    .kpi-value { font-size: 28px; font-weight: 800; color: #1A202C; }
+    .kpi-title { font-size: 14px; color: #000000; margin-bottom: 8px; font-weight: 600; }
+    .kpi-value { font-size: 28px; font-weight: 900; color: #000000; }
+    [data-testid="stSidebar"] { background-color: #FFFFFF; }
+    [data-testid="stSidebar"] * { color: #000000; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -73,7 +75,7 @@ if tab == "🏠 Dashboard":
         
         st.markdown("<br>", unsafe_allow_html=True)
         
-        # Top 10 Variance Chart
+        # Top 10 Variance Chart - WITH DARK BLACK AXES
         st.subheader("Top 10 Stock Count Variance")
         top10 = df.sort_values('Variance', ascending=False).head(10)
         
@@ -87,14 +89,26 @@ if tab == "🏠 Dashboard":
         )
         fig.update_layout(
             title="Top 10 Items with Highest Variance",
+            title_font=dict(size=18, color="#000000", family="Arial"),
             xaxis_title="Variance = Reorder Level - Current Stock",
+            xaxis_title_font=dict(size=14, color="#000000"),
+            yaxis_title="Variance",
+            yaxis_title_font=dict(size=14, color="#000"),
             plot_bgcolor='white',
             paper_bgcolor='white',
-            font=dict(color="#2D3748"),
-            xaxis_tickangle=-45,
+            font=dict(color="#000000", size=12),
+            xaxis=dict(
+                tickangle=-45, 
+                tickfont=dict(color="#000000", size=11),
+                title_font=dict(color="#000000")
+            ),
+            yaxis=dict(
+                tickfont=dict(color="#000", size=11),
+                title_font=dict(color="#000000")
+            ),
             showlegend=False
         )
-        fig.update_traces(textposition='outside')
+        fig.update_traces(textposition='outside', textfont=dict(color="#000", size=12))
         st.plotly_chart(fig, use_container_width=True)
     else:
         st.warning("No data loaded")
@@ -102,15 +116,18 @@ if tab == "🏠 Dashboard":
 # --- OTHER TABS ---
 elif tab == "📦 Inventory":
     st.title("Inventory")
-    if not st.session_state.stock.empty: st.dataframe(st.session_state.stock, use_container_width=True)
-    else: st.warning("Upload data first")
+    if not st.session_state.stock.empty: 
+        st.dataframe(st.session_state.stock, use_container_width=True)
+    else: 
+        st.warning("Upload data first")
 
 elif tab == "🚨 Alert Center":
     st.title("Alert Center")
     if not st.session_state.stock.empty:
         alerts = st.session_state.stock[st.session_state.stock['Variance'] > 0]
         st.dataframe(alerts, use_container_width=True)
-    else: st.warning("Upload data first")
+    else: 
+        st.warning("Upload data first")
 
 elif tab == "📤 Upload":
     st.title("Upload")
